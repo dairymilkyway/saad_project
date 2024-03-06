@@ -26,46 +26,28 @@
                         <i class="fas fa-building"></i> BeyondTheStalls
                     </h3>
                 </a>
-                <button class="navbar-toggler" type="button"
-                        data-toggle="collapse"
-                        data-target="#navbarNavAltMarkup"
-                        aria-controls="navbarNavAltMarkup"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ml-auto">
-                        <a class="nav-link" href="{{ route('tenant.index') }}" style="color: #343a40;">
-                            <i class="fas fa-users"></i> Tenants
+                        <a class="nav-link" href="{{ route('tenant.stall') }}" style="color: #343a40;">
+                            <i class="fas fa-warehouse"></i> My Stall
                         </a>
-                        <a class="nav-link" href="{{ route('admin.analytics') }}" style="color: #343a40;">
-                            <i class="fas fa-chart-area"></i> Analytics
-                        </a>
-                        <a class="nav-link" href="{{ route('stall.index') }}" style="color: #343a40;">
-                            <i class="fas fa-warehouse"></i> Monitoring
-                        </a>
-                        <a class="nav-link" href="{{ route('payment.index') }}" style="color: #343a40;">
-                            <i class="fas fa-money-bill"></i> Payments
-                        </a>
-                        <div class="nav-item dropdown">
+                    </div>
+                </div>
+                <div class="ml-auto">
+                    <div class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false" style="color: black;">
-    <i class="fas fa-user"></i> {{ Auth::user()->name }}
-</a>
-
-
-<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-    <a class="dropdown-item" href="{{ route('profile.edit') }}" style="color: black;">
-        <i class="fas fa-user"></i> View Profile
-    </a>
-    <div class="dropdown-divider"></div>
-<form action="{{ route('logout') }}" method="POST">
-    @csrf
-    <button type="submit" class="dropdown-item"><i class="fas fa-caret-right"></i> Logout</button>
-</form>
-
-</div>
-
+                            <i class="fas fa-user"></i> {{ Auth::user()->name }}
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('profile.edit') }}" style="color: black;">
+                                <i class="fas fa-user"></i> View Profile
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <form action="{{ route('logout') }}" method="POST">
+                                @csrf
+                                <button type="submit" class="dropdown-item"><i class="fas fa-caret-right"></i> Logout</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </nav>

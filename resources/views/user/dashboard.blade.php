@@ -15,8 +15,8 @@
             margin-bottom: 1000px; /* Add margin to the bottom of the first row */
         }
         .big-container {
-            flex: 1 0 30%;
-            padding: 70px;
+            flex: 1 0 25%;
+            padding: 50px;
             background-color: #b5c99a;
             border: 7px solid #ccc;
             border-radius: 10px;
@@ -30,29 +30,44 @@
         }
     </style>
     <div class="container">
+
+    <div class="big-container">
+
+        <a class="nav-link" href="{{ route('tenant.index') }}" style="color: #343a40;">
+        
+        <Center><h4><i class="fas fa-users"></i> Tenants</h2></center>
+    </a>
+       </div>
+
         <div class="big-container">
-            <h2>Container 1</h2>
-            <p>This is the content of container 1.</p>
+
+            <a class="nav-link" href="{{ route('admin.analytics') }}" style="color: #343a40;">
+                
+               <center> <h4><i class="fas fa-chart-area"></i> Analytics</h2></center>
+               </a>
         </div>
+
         <div class="big-container">
-            <h2>Container 2</h2>
-            <p>This is the content of container 2.</p>
+
+            <a class="nav-link" href="{{ route('stall.index') }}" style="color: #343a40;"> 
+        
+            <Center><h4><i class="fas fa-warehouse"></i> Monitoring</h2></center>
+            </a>
         </div>
+
         <div class="big-container">
-            <h2>Container 3</h2>
-            <p>This is the content of container 3.</p>
+           
+            <a class="nav-link" href="{{ route('payment.index') }}" style="color: #343a40;">
+             
+                <Center> <h4> <i class="fas fa-money-bill"></i> Payments</h4></Center>
+                </a>
         </div>
+
         <div class="big-container">
-            <h2>Container 4</h2>
-            <p>This is the content of container 4.</p>
-        </div>
-        <div class="big-container">
-            <h2>Container 5</h2>
-            <p>This is the content of container 5.</p>
-        </div>
-        <div class="big-container">
-            <h2>Container 6</h2>
-            <p>This is the content of container 6.</p>
+            <a class="nav-link" href="{{ route('parking.index') }}" style="color: #343a40;">
+               
+                <Center> <h4><i class="fas fa-car"></i> Parking</h4></Center>
+                </a>
         </div>
     </div>
 </x-app-layout>
